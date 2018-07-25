@@ -54,6 +54,7 @@
 		2693817D2101F3BF0074C700 /* AddcnBadminton */ = {
 			isa = PBXGroup;
 			children = (
+				26B4C17D2108AC05007B9FAC /* Member */,
 				2693817E2101F3BF0074C700 /* AppDelegate.swift */,
 				269381802101F3BF0074C700 /* ViewController.swift */,
 				269381822101F3BF0074C700 /* Main.storyboard */,
@@ -62,6 +63,13 @@
 				2693818A2101F3C00074C700 /* Info.plist */,
 			);
 			path = AddcnBadminton;
+			sourceTree = "<group>";
+		};
+		26B4C17D2108AC05007B9FAC /* Member */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Member;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

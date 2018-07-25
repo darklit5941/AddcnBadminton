@@ -11,23 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--社員列表Navigation-->
-        <scene sceneID="KCc-eD-IIP">
-            <objects>
-                <navigationController title="社員列表Navigation" id="8De-v2-xol" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="社員管理" id="0hV-st-FDa"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jEw-4N-sll">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ILb-Ih-6hg" kind="relationship" relationship="rootViewController" id="okl-KJ-f9R"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d5h-45-a6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="686" y="134"/>
-        </scene>
         <!--計分版-->
         <scene sceneID="rOy-Ep-8wq">
             <objects>
@@ -118,37 +101,38 @@
             <point key="canvasLocation" x="685.60000000000002" y="-612.14392803598207"/>
         </scene>
         <!--社員列表-->
-        <scene sceneID="sM0-zj-RV2">
+        <scene sceneID="iL8-Xf-Xpk">
             <objects>
-                <viewController title="社員列表" id="ILb-Ih-6hg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3eu-Ka-HSI">
+                <viewController title="社員列表" id="7ZY-dd-bsE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VJG-SQ-erJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fcH-dm-Pdh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oVA-BG-QQN">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fcH-dm-Pdh" firstAttribute="leading" secondItem="Yn7-7G-EfH" secondAttribute="leading" id="7K5-A3-qIF"/>
-                            <constraint firstItem="fcH-dm-Pdh" firstAttribute="top" secondItem="Yn7-7G-EfH" secondAttribute="top" id="Ihs-iE-FTq"/>
-                            <constraint firstItem="Yn7-7G-EfH" firstAttribute="trailing" secondItem="fcH-dm-Pdh" secondAttribute="trailing" id="jm2-4C-tmI"/>
-                            <constraint firstItem="Yn7-7G-EfH" firstAttribute="bottom" secondItem="fcH-dm-Pdh" secondAttribute="bottom" id="mxN-49-Fce"/>
+                            <constraint firstItem="sfS-R0-l1J" firstAttribute="bottom" secondItem="oVA-BG-QQN" secondAttribute="bottom" id="6u4-WQ-wYE"/>
+                            <constraint firstAttribute="trailing" secondItem="oVA-BG-QQN" secondAttribute="trailing" id="JoN-Cz-ynh"/>
+                            <constraint firstItem="oVA-BG-QQN" firstAttribute="top" secondItem="sfS-R0-l1J" secondAttribute="top" id="Wp7-WN-0dl"/>
+                            <constraint firstItem="oVA-BG-QQN" firstAttribute="leading" secondItem="sfS-R0-l1J" secondAttribute="leading" id="XpF-mD-oI0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Yn7-7G-EfH"/>
+                        <viewLayoutGuide key="safeArea" id="sfS-R0-l1J"/>
                     </view>
-                    <navigationItem key="navigationItem" title="社員列表" id="Oox-jx-2ZG">
-                        <barButtonItem key="rightBarButtonItem" title="新增社員" id="bXJ-2I-Xap">
+                    <navigationItem key="navigationItem" title="社員列表" id="tMr-Dd-6E3">
+                        <barButtonItem key="rightBarButtonItem" title="新增社員" id="AG6-o0-zAa">
                             <connections>
-                                <segue destination="LOW-3Z-tWC" kind="show" id="cuC-0T-TkM"/>
+                                <segue destination="LOW-3Z-tWC" kind="show" id="4ea-ZF-yDd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3so-Zj-tW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0v8-pC-Ojh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="134"/>
+            <point key="canvasLocation" x="1574" y="134"/>
         </scene>
         <!--社員資料-->
         <scene sceneID="Vf5-eG-aDo">
@@ -370,7 +354,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="dCJ-Rk-Abh" kind="relationship" relationship="viewControllers" id="MRe-B1-tND"/>
-                        <segue destination="8De-v2-xol" kind="relationship" relationship="viewControllers" id="5ap-un-KUG"/>
+                        <segue destination="g0x-hB-kcP" kind="relationship" relationship="viewControllers" id="r2c-ok-d14"/>
                         <segue destination="hmO-3o-dj9" kind="relationship" relationship="viewControllers" id="UPc-Nc-6Wa"/>
                         <segue destination="fgK-D4-YKU" kind="relationship" relationship="viewControllers" id="JlI-Cg-ep1"/>
                     </connections>
@@ -394,6 +378,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tD-wT-Pjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="590" y="-1343"/>
+        </scene>
+        <!--社員列表Navigation-->
+        <scene sceneID="A66-dq-QWg">
+            <objects>
+                <navigationController title="社員列表Navigation" automaticallyAdjustsScrollViewInsets="NO" id="g0x-hB-kcP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="社員管理" id="kl7-RW-ceH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xSw-A3-V6K">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7ZY-dd-bsE" kind="relationship" relationship="rootViewController" id="VaZ-5p-cZQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6y-n6-Jtu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="134"/>
         </scene>
     </scenes>
 </document>
