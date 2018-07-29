@@ -14,7 +14,7 @@
         <!--社員列表-->
         <scene sceneID="iL8-Xf-Xpk">
             <objects>
-                <viewController title="社員列表" id="7ZY-dd-bsE" sceneMemberID="viewController">
+                <viewController title="社員列表" id="7ZY-dd-bsE" customClass="MemberListViewController" customModule="AddcnBadminton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJG-SQ-erJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="MemberListTableView" destination="oVA-BG-QQN" id="Cc7-q0-cse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0v8-pC-Ojh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
