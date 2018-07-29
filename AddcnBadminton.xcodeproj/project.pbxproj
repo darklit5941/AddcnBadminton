@@ -10,6 +10,9 @@
 		2651E60F210D8A87006516F7 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E60E210D8A87006516F7 /* MemberListViewController.swift */; };
 		2651E612210D8B8A006516F7 /* MemberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E610210D8B89006516F7 /* MemberListTableViewCell.swift */; };
 		2651E613210D8B8A006516F7 /* MemberListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2651E611210D8B8A006516F7 /* MemberListTableViewCell.xib */; };
+		2651E616210D99E5006516F7 /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E615210D99E5006516F7 /* FightViewController.swift */; };
+		2651E619210D9D4B006516F7 /* FightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E617210D9D4B006516F7 /* FightTableViewCell.swift */; };
+		2651E61A210D9D4B006516F7 /* FightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2651E618210D9D4B006516F7 /* FightTableViewCell.xib */; };
 		2693817F2101F3BF0074C700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693817E2101F3BF0074C700 /* AppDelegate.swift */; };
 		269381812101F3BF0074C700 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269381802101F3BF0074C700 /* ViewController.swift */; };
 		269381842101F3BF0074C700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269381822101F3BF0074C700 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 		2651E60E210D8A87006516F7 /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		2651E610210D8B89006516F7 /* MemberListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListTableViewCell.swift; sourceTree = "<group>"; };
 		2651E611210D8B8A006516F7 /* MemberListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListTableViewCell.xib; sourceTree = "<group>"; };
+		2651E615210D99E5006516F7 /* FightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = "<group>"; };
+		2651E617210D9D4B006516F7 /* FightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightTableViewCell.swift; sourceTree = "<group>"; };
+		2651E618210D9D4B006516F7 /* FightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightTableViewCell.xib; sourceTree = "<group>"; };
 		2693817B2101F3BF0074C700 /* AddcnBadminton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddcnBadminton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2693817E2101F3BF0074C700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		269381802101F3BF0074C700 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 			path = MemberList;
 			sourceTree = "<group>";
 		};
+		2651E614210D99A0006516F7 /* Fight */ = {
+			isa = PBXGroup;
+			children = (
+				2651E615210D99E5006516F7 /* FightViewController.swift */,
+				2651E617210D9D4B006516F7 /* FightTableViewCell.swift */,
+				2651E618210D9D4B006516F7 /* FightTableViewCell.xib */,
+			);
+			path = Fight;
+			sourceTree = "<group>";
+		};
 		269381722101F3BE0074C700 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +86,7 @@
 		2693817D2101F3BF0074C700 /* AddcnBadminton */ = {
 			isa = PBXGroup;
 			children = (
+				2651E614210D99A0006516F7 /* Fight */,
 				2651E60D210D8A5B006516F7 /* MemberList */,
 				2693817E2101F3BF0074C700 /* AppDelegate.swift */,
 				269381802101F3BF0074C700 /* ViewController.swift */,
@@ -140,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				269381892101F3C00074C700 /* LaunchScreen.storyboard in Resources */,
+				2651E61A210D9D4B006516F7 /* FightTableViewCell.xib in Resources */,
 				269381862101F3C00074C700 /* Assets.xcassets in Resources */,
 				269381842101F3BF0074C700 /* Main.storyboard in Resources */,
 				2651E613210D8B8A006516F7 /* MemberListTableViewCell.xib in Resources */,
@@ -153,6 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2651E619210D9D4B006516F7 /* FightTableViewCell.swift in Sources */,
+				2651E616210D99E5006516F7 /* FightViewController.swift in Sources */,
 				269381812101F3BF0074C700 /* ViewController.swift in Sources */,
 				2693817F2101F3BF0074C700 /* AppDelegate.swift in Sources */,
 				2651E60F210D8A87006516F7 /* MemberListViewController.swift in Sources */,

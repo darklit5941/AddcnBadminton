@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1574" y="134"/>
         </scene>
-        <!--對戰列表-->
+        <!--對戰紀錄-->
         <scene sceneID="ims-EJ-zKo">
             <objects>
-                <viewController title="對戰列表" id="pE6-T0-aGV" sceneMemberID="viewController">
+                <viewController title="對戰紀錄" id="pE6-T0-aGV" customClass="FightViewController" customModule="AddcnBadminton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HAt-CO-Rhg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,9 +70,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gFY-pH-KWX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yo2-cB-nmZ">
+                    <navigationItem key="navigationItem" title="對戰紀錄" id="Yo2-cB-nmZ">
                         <barButtonItem key="rightBarButtonItem" title="新增對戰" id="LED-Oq-wgh"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="FightTableView" destination="Jpk-BM-ukU" id="92U-0k-rWS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBu-2D-Fzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

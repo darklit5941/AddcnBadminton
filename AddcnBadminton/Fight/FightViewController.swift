@@ -1,5 +1,5 @@
 //
-//  MemberListViewController.swift
+//  FightViewController.swift
 //  AddcnBadminton
 //
 //  Created by Hua David on 2018/7/29.
@@ -8,18 +8,19 @@
 
 import UIKit
 
-class MemberListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class FightViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     let dateFormatterPrinter = DateFormatter()
     
     struct dataStruct {
-        var name:String
+        var teamOneName:String
+        var teamTwoName:String
         var createdTime:Date
     }
     
     var data:[dataStruct] = [
-        dataStruct(name: "王大明", createdTime: Date()),
-        dataStruct(name: "李小美", createdTime: Date())
+        dataStruct(teamOneName: "王大明&李小美", teamTwoName: "艾昇華&阿土伯", createdTime: Date()),
+        dataStruct(teamOneName: "阿土伯&李小美", teamTwoName: "王大明&艾昇華", createdTime: Date())
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,21 +28,22 @@ class MemberListViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MemberListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FightTableViewCell
         dateFormatterPrinter.dateFormat = "yyyy-MM-dd"
-        cell.nameLabel.text = data[indexPath.row].name
-        cell.createdTimeLabel.text = dateFormatterPrinter.string(from: data[indexPath.row].createdTime)
+        cell.teamOneLabel.text = data[indexPath.row].teamOneName
+        cell.teamTwoLabel.text = data[indexPath.row].teamTwoName
+        cell.fightTimeLabel.text = dateFormatterPrinter.string(from: data[indexPath.row].createdTime)
         
         return cell
     }
 
-    @IBOutlet weak var MemberListTableView: UITableView!
+    @IBOutlet weak var FightTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MemberListTableView.delegate = self
-        MemberListTableView.dataSource = self
-        MemberListTableView.register(UINib(nibName: "MemberListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        FightTableView.delegate = self
+        FightTableView.dataSource = self
+        FightTableView.register(UINib(nibName: "FightTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
     }
 

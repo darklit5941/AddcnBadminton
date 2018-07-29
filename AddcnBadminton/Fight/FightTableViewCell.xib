@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="FightTableViewCell" customModule="AddcnBadminton" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbR-WP-GM2">
+                        <rect key="frame" x="16" y="11" width="190.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-ZO-y7u">
+                        <rect key="frame" x="0.0" y="32" width="381" height="42.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erZ-2K-adD">
+                        <rect key="frame" x="206.5" y="11" width="174.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="erZ-2K-adD" secondAttribute="trailing" id="03u-HF-K3h"/>
+                    <constraint firstItem="4Uf-ZO-y7u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2fn-Ij-84z"/>
+                    <constraint firstItem="erZ-2K-adD" firstAttribute="leading" secondItem="bbR-WP-GM2" secondAttribute="trailing" id="2kH-QW-gG0"/>
+                    <constraint firstItem="bbR-WP-GM2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Njp-mO-3KS"/>
+                    <constraint firstItem="4Uf-ZO-y7u" firstAttribute="top" secondItem="erZ-2K-adD" secondAttribute="bottom" id="Tel-bU-Q5o"/>
+                    <constraint firstAttribute="trailing" secondItem="4Uf-ZO-y7u" secondAttribute="trailing" id="Uq5-Zr-zdK"/>
+                    <constraint firstAttribute="bottom" secondItem="4Uf-ZO-y7u" secondAttribute="bottom" id="de4-ct-1oy"/>
+                    <constraint firstItem="bbR-WP-GM2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hcT-q1-PNg"/>
+                    <constraint firstItem="bbR-WP-GM2" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="md6-5k-DhA"/>
+                    <constraint firstItem="erZ-2K-adD" firstAttribute="top" secondItem="bbR-WP-GM2" secondAttribute="top" id="qs3-5Q-fcp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="fightTimeLabel" destination="4Uf-ZO-y7u" id="N46-5X-Aee"/>
+                <outlet property="teamOneLabel" destination="bbR-WP-GM2" id="9Uq-nd-cct"/>
+                <outlet property="teamTwoLabel" destination="erZ-2K-adD" id="VS8-ZV-Tmq"/>
+            </connections>
+            <point key="canvasLocation" x="151.5" y="-95.5"/>
+        </tableViewCell>
+    </objects>
+</document>
