@@ -10,13 +10,16 @@ import UIKit
 
 class MemberListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    let dateFormatterPrinter = DateFormatter()
+    
     struct dataStruct {
         var name:String
+        var createTime:Date
     }
     
     var data:[dataStruct] = [
-        dataStruct(name: "王大明"),
-        dataStruct(name: "李小美")
+        dataStruct(name: "王大明", createTime: Date()),
+        dataStruct(name: "李小美", createTime: Date())
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,8 +28,9 @@ class MemberListViewController: UIViewController,UITableViewDataSource,UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MemberListTableViewCell
-        
+        dateFormatterPrinter.dateFormat = "yyyy-MM-dd"
         cell.nameLabel.text = data[indexPath.row].name
+        cell.createdTimeLabel.text = dateFormatterPrinter.string(from: data[indexPath.row].createTime)
         
         return cell
     }

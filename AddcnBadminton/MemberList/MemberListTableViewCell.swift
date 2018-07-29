@@ -11,6 +11,7 @@ import UIKit
 class MemberListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var createdTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

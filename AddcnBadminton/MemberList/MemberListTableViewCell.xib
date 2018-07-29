@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +22,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ta-ck-Ivm">
-                        <rect key="frame" x="16" y="11" width="320" height="22"/>
+                        <rect key="frame" x="16" y="11" width="160" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUQ-CT-S0P">
+                        <rect key="frame" x="176" y="11" width="160" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,13 +36,18 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="2ta-ck-Ivm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="6Yb-QR-v0V"/>
+                    <constraint firstItem="KUQ-CT-S0P" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="8Tl-qW-6EK"/>
                     <constraint firstItem="2ta-ck-Ivm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="JfK-GK-vp2"/>
+                    <constraint firstItem="KUQ-CT-S0P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ndo-Cp-yfV"/>
+                    <constraint firstItem="KUQ-CT-S0P" firstAttribute="leading" secondItem="2ta-ck-Ivm" secondAttribute="trailing" id="Rrr-Ck-yzl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="2ta-ck-Ivm" secondAttribute="bottom" id="ZYg-Ja-JIk"/>
-                    <constraint firstItem="2ta-ck-Ivm" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="dhp-P5-ztb"/>
+                    <constraint firstItem="2ta-ck-Ivm" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="dhp-P5-ztb"/>
+                    <constraint firstItem="KUQ-CT-S0P" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="rqQ-9e-kh7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="createdTimeLabel" destination="KUQ-CT-S0P" id="isR-V6-ZML"/>
                 <outlet property="nameLabel" destination="2ta-ck-Ivm" id="tB3-8X-Ua7"/>
             </connections>
         </tableViewCell>
