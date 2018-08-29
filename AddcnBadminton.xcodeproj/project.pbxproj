@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06F766FB15050DB35888D839 /* Pods_AddcnBadminton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D10D6407A32720433AD756 /* Pods_AddcnBadminton.framework */; };
 		2651E60F210D8A87006516F7 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E60E210D8A87006516F7 /* MemberListViewController.swift */; };
 		2651E612210D8B8A006516F7 /* MemberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E610210D8B89006516F7 /* MemberListTableViewCell.swift */; };
 		2651E613210D8B8A006516F7 /* MemberListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2651E611210D8B8A006516F7 /* MemberListTableViewCell.xib */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08D10D6407A32720433AD756 /* Pods_AddcnBadminton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddcnBadminton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20042B25877E136956A845ED /* Pods-AddcnBadminton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddcnBadminton.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton.release.xcconfig"; sourceTree = "<group>"; };
 		2651E60E210D8A87006516F7 /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		2651E610210D8B89006516F7 /* MemberListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListTableViewCell.swift; sourceTree = "<group>"; };
 		2651E611210D8B8A006516F7 /* MemberListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListTableViewCell.xib; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		269381852101F3C00074C700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		269381882101F3C00074C700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2693818A2101F3C00074C700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF663536DF52334AAB5F3147 /* Pods-AddcnBadminton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddcnBadminton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F766FB15050DB35888D839 /* Pods_AddcnBadminton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,8 @@
 			children = (
 				2693817D2101F3BF0074C700 /* AddcnBadminton */,
 				2693817C2101F3BF0074C700 /* Products */,
+				72A197CF1C29C5A9ED979FAD /* Pods */,
+				3DED3DF8431A6E4193BD88E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +105,23 @@
 			path = AddcnBadminton;
 			sourceTree = "<group>";
 		};
+		3DED3DF8431A6E4193BD88E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08D10D6407A32720433AD756 /* Pods_AddcnBadminton.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72A197CF1C29C5A9ED979FAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF663536DF52334AAB5F3147 /* Pods-AddcnBadminton.debug.xcconfig */,
+				20042B25877E136956A845ED /* Pods-AddcnBadminton.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2693818D2101F3C00074C700 /* Build configuration list for PBXNativeTarget "AddcnBadminton" */;
 			buildPhases = (
+				56FBDE918BFA9049B01BC840 /* [CP] Check Pods Manifest.lock */,
 				269381772101F3BE0074C700 /* Sources */,
 				269381782101F3BE0074C700 /* Frameworks */,
 				269381792101F3BE0074C700 /* Resources */,
+				0DA77B0E50F122B096CEA2AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +191,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DA77B0E50F122B096CEA2AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56FBDE918BFA9049B01BC840 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AddcnBadminton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		269381772101F3BE0074C700 /* Sources */ = {
@@ -318,6 +393,7 @@
 		};
 		2693818E2101F3C00074C700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF663536DF52334AAB5F3147 /* Pods-AddcnBadminton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +412,7 @@
 		};
 		2693818F2101F3C00074C700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20042B25877E136956A845ED /* Pods-AddcnBadminton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
