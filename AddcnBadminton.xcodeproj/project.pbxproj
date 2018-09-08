@@ -19,6 +19,9 @@
 		269381842101F3BF0074C700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269381822101F3BF0074C700 /* Main.storyboard */; };
 		269381862101F3C00074C700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269381852101F3C00074C700 /* Assets.xcassets */; };
 		269381892101F3C00074C700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269381872101F3C00074C700 /* LaunchScreen.storyboard */; };
+		26EE98842136B6F800C92008 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE98832136B6F800C92008 /* Members.swift */; };
+		26EE98862136B96E00C92008 /* MemberAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE98852136B96E00C92008 /* MemberAddViewController.swift */; };
+		26EE9888214363A900C92008 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE9887214363A900C92008 /* RealmMigration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		269381852101F3C00074C700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		269381882101F3C00074C700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2693818A2101F3C00074C700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26EE98832136B6F800C92008 /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
+		26EE98852136B96E00C92008 /* MemberAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAddViewController.swift; sourceTree = "<group>"; };
+		26EE9887214363A900C92008 /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		FF663536DF52334AAB5F3147 /* Pods-AddcnBadminton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddcnBadminton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +64,7 @@
 				2651E60E210D8A87006516F7 /* MemberListViewController.swift */,
 				2651E610210D8B89006516F7 /* MemberListTableViewCell.swift */,
 				2651E611210D8B8A006516F7 /* MemberListTableViewCell.xib */,
+				26EE98852136B96E00C92008 /* MemberAddViewController.swift */,
 			);
 			path = MemberList;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 		2693817D2101F3BF0074C700 /* AddcnBadminton */ = {
 			isa = PBXGroup;
 			children = (
+				26EE98822136B64500C92008 /* database */,
 				2651E614210D99A0006516F7 /* Fight */,
 				2651E60D210D8A5B006516F7 /* MemberList */,
 				2693817E2101F3BF0074C700 /* AppDelegate.swift */,
@@ -103,6 +111,15 @@
 				2693818A2101F3C00074C700 /* Info.plist */,
 			);
 			path = AddcnBadminton;
+			sourceTree = "<group>";
+		};
+		26EE98822136B64500C92008 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				26EE98832136B6F800C92008 /* Members.swift */,
+				26EE9887214363A900C92008 /* RealmMigration.swift */,
+			);
+			path = database;
 			sourceTree = "<group>";
 		};
 		3DED3DF8431A6E4193BD88E8 /* Frameworks */ = {
@@ -198,16 +215,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -222,15 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AddcnBadminton-checkManifestLockResult.txt",
 			);
@@ -246,12 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EE98862136B96E00C92008 /* MemberAddViewController.swift in Sources */,
 				2651E619210D9D4B006516F7 /* FightTableViewCell.swift in Sources */,
 				2651E616210D99E5006516F7 /* FightViewController.swift in Sources */,
+				26EE9888214363A900C92008 /* RealmMigration.swift in Sources */,
 				269381812101F3BF0074C700 /* ViewController.swift in Sources */,
 				2693817F2101F3BF0074C700 /* AppDelegate.swift in Sources */,
 				2651E60F210D8A87006516F7 /* MemberListViewController.swift in Sources */,
 				2651E612210D8B8A006516F7 /* MemberListTableViewCell.swift in Sources */,
+				26EE98842136B6F800C92008 /* Members.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -84,7 +84,7 @@
         <!--社員資料-->
         <scene sceneID="Vf5-eG-aDo">
             <objects>
-                <viewController title="社員資料" hidesBottomBarWhenPushed="YES" id="LOW-3Z-tWC" sceneMemberID="viewController">
+                <viewController title="社員資料" hidesBottomBarWhenPushed="YES" id="LOW-3Z-tWC" customClass="MemberAddViewController" customModule="AddcnBadminton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z4z-jB-k10">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,8 +266,17 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="社員列表" id="xlT-Xw-LwK">
-                        <barButtonItem key="rightBarButtonItem" title="儲存" id="1dH-k7-G8e"/>
+                        <barButtonItem key="rightBarButtonItem" title="儲存" id="1dH-k7-G8e">
+                            <connections>
+                                <action selector="SaveMemberData:" destination="LOW-3Z-tWC" id="3YU-f4-I9r"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="genderSegmented" destination="GL9-1b-eZM" id="3lq-dn-W1I"/>
+                        <outlet property="nameTextField" destination="2Q7-gq-vPn" id="Wdp-NQ-d0v"/>
+                        <outlet property="nicknameTextField" destination="9K5-0w-mRf" id="hvU-Yw-ip8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcm-3z-kwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
