@@ -11,26 +11,18 @@ import UIKit
 class MemberListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     let dateFormatterPrinter = DateFormatter()
-    
-    struct dataStruct {
-        var name:String
-        var createdTime:Date
-    }
-    
-    var data:[dataStruct] = [
-        dataStruct(name: "王大明", createdTime: Date()),
-        dataStruct(name: "李小美", createdTime: Date())
-    ]
+
+    let memberResult = realm.objects(RLM_Members.self)
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return memberResult.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MemberListTableViewCell
         dateFormatterPrinter.dateFormat = "yyyy-MM-dd"
-        cell.nameLabel.text = data[indexPath.row].name
-        cell.createdTimeLabel.text = dateFormatterPrinter.string(from: data[indexPath.row].createdTime)
+        cell.nameLabel.text = memberResult[indexPath.row].nickname
+        cell.createdTimeLabel.text = dateFormatterPrinter.string(from: memberResult[indexPath.row].createDate)
         
         return cell
     }
@@ -43,6 +35,11 @@ class MemberListViewController: UIViewController,UITableViewDataSource,UITableVi
         MemberListTableView.dataSource = self
         MemberListTableView.register(UINib(nibName: "MemberListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MemberListTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

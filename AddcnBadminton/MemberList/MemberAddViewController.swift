@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class MemberAddViewController: UIViewController {
 
@@ -31,7 +30,7 @@ class MemberAddViewController: UIViewController {
         let nickname: String = nicknameTextField.text!
         let gender: String = genderSegmented.titleForSegment(at: genderSegmented.selectedSegmentIndex)!
         
-        //print("fileURL: \(realm.configuration.fileURL!)")
+        print("fileURL: \(realm.configuration.fileURL!)")
         let member = RLM_Members()
         member.name = name
         member.nickname = nickname

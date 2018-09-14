@@ -21,7 +21,7 @@ class RealmMigration {
         
         let config = Realm.Configuration(
             
-            schemaVersion : 2 ,
+            schemaVersion : 1 ,
             
             migrationBlock : { migration , oldSchemaVersion in
                 
