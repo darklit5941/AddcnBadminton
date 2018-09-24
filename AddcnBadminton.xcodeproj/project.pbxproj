@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06F766FB15050DB35888D839 /* Pods_AddcnBadminton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D10D6407A32720433AD756 /* Pods_AddcnBadminton.framework */; };
+		261F0F5821526B5E001987E6 /* RLM_Fights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261F0F5721526B5E001987E6 /* RLM_Fights.swift */; };
 		2651E60F210D8A87006516F7 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E60E210D8A87006516F7 /* MemberListViewController.swift */; };
 		2651E612210D8B8A006516F7 /* MemberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2651E610210D8B89006516F7 /* MemberListTableViewCell.swift */; };
 		2651E613210D8B8A006516F7 /* MemberListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2651E611210D8B8A006516F7 /* MemberListTableViewCell.xib */; };
@@ -19,7 +20,7 @@
 		269381842101F3BF0074C700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269381822101F3BF0074C700 /* Main.storyboard */; };
 		269381862101F3C00074C700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269381852101F3C00074C700 /* Assets.xcassets */; };
 		269381892101F3C00074C700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269381872101F3C00074C700 /* LaunchScreen.storyboard */; };
-		26EE98842136B6F800C92008 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE98832136B6F800C92008 /* Members.swift */; };
+		26EE98842136B6F800C92008 /* RLM_Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE98832136B6F800C92008 /* RLM_Members.swift */; };
 		26EE98862136B96E00C92008 /* MemberAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE98852136B96E00C92008 /* MemberAddViewController.swift */; };
 		26EE9888214363A900C92008 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE9887214363A900C92008 /* RealmMigration.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		08D10D6407A32720433AD756 /* Pods_AddcnBadminton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddcnBadminton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20042B25877E136956A845ED /* Pods-AddcnBadminton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddcnBadminton.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton.release.xcconfig"; sourceTree = "<group>"; };
+		261F0F5721526B5E001987E6 /* RLM_Fights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLM_Fights.swift; sourceTree = "<group>"; };
 		2651E60E210D8A87006516F7 /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		2651E610210D8B89006516F7 /* MemberListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListTableViewCell.swift; sourceTree = "<group>"; };
 		2651E611210D8B8A006516F7 /* MemberListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListTableViewCell.xib; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		269381852101F3C00074C700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		269381882101F3C00074C700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2693818A2101F3C00074C700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26EE98832136B6F800C92008 /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
+		26EE98832136B6F800C92008 /* RLM_Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLM_Members.swift; sourceTree = "<group>"; };
 		26EE98852136B96E00C92008 /* MemberAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAddViewController.swift; sourceTree = "<group>"; };
 		26EE9887214363A900C92008 /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		FF663536DF52334AAB5F3147 /* Pods-AddcnBadminton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddcnBadminton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AddcnBadminton/Pods-AddcnBadminton.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,8 +118,9 @@
 		26EE98822136B64500C92008 /* database */ = {
 			isa = PBXGroup;
 			children = (
-				26EE98832136B6F800C92008 /* Members.swift */,
+				26EE98832136B6F800C92008 /* RLM_Members.swift */,
 				26EE9887214363A900C92008 /* RealmMigration.swift */,
+				261F0F5721526B5E001987E6 /* RLM_Fights.swift */,
 			);
 			path = database;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261F0F5821526B5E001987E6 /* RLM_Fights.swift in Sources */,
 				26EE98862136B96E00C92008 /* MemberAddViewController.swift in Sources */,
 				2651E619210D9D4B006516F7 /* FightTableViewCell.swift in Sources */,
 				2651E616210D99E5006516F7 /* FightViewController.swift in Sources */,
@@ -263,7 +267,7 @@
 				2693817F2101F3BF0074C700 /* AppDelegate.swift in Sources */,
 				2651E60F210D8A87006516F7 /* MemberListViewController.swift in Sources */,
 				2651E612210D8B8A006516F7 /* MemberListTableViewCell.swift in Sources */,
-				26EE98842136B6F800C92008 /* Members.swift in Sources */,
+				26EE98842136B6F800C92008 /* RLM_Members.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
